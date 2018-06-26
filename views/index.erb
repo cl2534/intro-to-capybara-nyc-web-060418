@@ -1,1 +1,26 @@
 <%# Write your code here! %>
+<!-- describe "GET '/' - Greeting Form" do
+  # Code from previous example
+  it 'welcomes the user' do
+    visit '/'
+    expect(page.body).to include("Welcome!")
+  end
+
+  # New test
+  it 'has a greeting form with a user_name field' do
+    visit '/'
+
+    expect(page).to have_selector("form")
+    expect(page).to have_field(:user_name)
+  end
+end -->
+
+  <h1>Welcome!</h1>
+
+  <form action="/greet" method="POST">
+    <label for="user_name">Name:</label>
+
+    <p><input type="text" name="user_name" id="user_name" /></p>
+
+    <input type="submit" value="Submit"/>
+  </form>
